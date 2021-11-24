@@ -39,6 +39,38 @@ const filteredTodoListState = selector({
   },
 });
 
+const todoListStatsState = selector({
+  key: 'todoListStatsState',
+  get: ({ get }) => {
+    const list = get(todoListState);
+    const values = new Map();
+
+    values.set('total', list.length);
+    values.set('total_Completed', list.filter(item => item.isComplete).length);
+    values.set('total_Uncompleted', values.get('total') - values.get('total_Completed'));
+    values.set('percent_Completed', (values.get('total')>0) ? values.get('total_Completed')*100/values.get('total') : 0);
+
+    return values;
+  },
+});
+
+function TodoListStats() {
+  const todoStats = useRecoilValue(todoListStatsState);
+  const arrKeys = todoStats ? [...todoStats.keys()] : null;
+
+  return (
+    <ul>
+    { arrKeys && arrKeys.map((item) =>
+        <li key={item}>
+          {item}: {todoStats.get(item)}
+          {item==='percent_Completed' ? '%' : ''}
+        </li>
+      )
+    }
+    </ul>
+  );
+}
+
 function TodoListFilters() {
   const [filter, setFilter] = useRecoilState(todoListFilterState);
 
@@ -48,7 +80,7 @@ function TodoListFilters() {
 
   return (
     <>
-      Filter:
+      Filter: &nbsp;
       <select value={filter} onChange={updateFilter}>
         <option value="Show All">All</option>
         <option value="Show Completed">Completed</option>
@@ -56,22 +88,6 @@ function TodoListFilters() {
       </select>
     </>
   );
-}
-
-function TodoList() {
-  const todoList = useRecoilValue(filteredTodoListState);
-
-  return (
-    <>
-      {/* <TodoListStats /> */}
-      <TodoListFilters />
-      <TodoItemCreator />
-
-      {todoList.map((todoItem) => (
-        <TodoItem key={todoItem.id} item={todoItem} />
-      ))}
-    </>
-  )
 }
 
 function TodoItemCreator() {
@@ -157,11 +173,30 @@ function getId() {
   return id++;
 }
 
-export default function ShowTodoList() {
+function TodoList() {
+  const todoList = useRecoilValue(filteredTodoListState);
+
+  return (
+    <>
+      <TodoListStats />
+      <TodoListFilters />
+      <TodoItemCreator />
+
+      {todoList.map((todoItem) => (
+        <TodoItem key={todoItem.id} item={todoItem} />
+      ))}
+    </>
+  )
+}
+
+function ShowTodoList() {
   return (
     <main className="App-main">
-      <h2>TODO List with Recoil</h2>
+      <h2>ToDo List</h2>
+      <h4>[Recoil State Management]</h4>
       <TodoList />
     </main>
   )
 }
+
+export default ShowTodoList;

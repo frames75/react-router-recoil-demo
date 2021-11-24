@@ -51,7 +51,7 @@ function App() {
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}          
             to="/todoListRecoil">
-              TODO List
+              ToDo List
           </Link>
         </nav>
         <main className="App-content">
