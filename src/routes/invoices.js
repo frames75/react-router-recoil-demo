@@ -37,10 +37,12 @@ export default function Invoices() {
     <main className="App-body">
       <nav className="App-nav">
         <h2>Invoices</h2>
+        <label>Find: </label>
         <input
           value={searchParams.get("filter") || ""}
           onChange={event => handleChangeSearch(event)}
         />
+        <br/>
         { invoices
           .filter(invoice => {
             const filter = searchParams.get("filter");

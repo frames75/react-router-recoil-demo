@@ -1,12 +1,21 @@
 import './App.css';
+// import ShowTodoList from './showTodoList';
 import { Outlet, Link } from 'react-router-dom';
+
+/**
+ * Declare state management wraper
+ */
+import {
+  RecoilRoot,
+} from 'recoil';
 
 function App() {
   return (
+    <RecoilRoot>
     <div className="App">
       <header className="App-header">
         <h2>
-          React Router & Recoil (state management) Demo
+          React Router & Recoil Demo
         </h2>
         <div className="flex-row">
           <a
@@ -31,13 +40,18 @@ function App() {
         <nav className="App-nav">
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}
+            to="/">
+              Home
+          </Link>
+          <Link 
+            style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}
             to="/invoices">
               Invoices
           </Link>
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}          
-            to="/expenses">
-              Expenses
+            to="/todoListRecoil">
+              TODO List
           </Link>
         </nav>
         <main className="App-content">
@@ -45,6 +59,7 @@ function App() {
         </main>
       </div>
     </div>
+    </RecoilRoot>
   );
 }
 

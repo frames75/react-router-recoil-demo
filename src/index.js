@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './App';
-import Expenses from "./routes/expenses";
+import Home from './home.js';
+import TodoListRecoil from "./routes/todoListRecoil";
 import Invoices from "./routes/invoices";
 import Invoice from "./routes/invoice";
 
@@ -21,7 +22,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} >
-          <Route path='expenses' element={<Expenses />} />
+          <Route index
+                 element={<Home />}
+          />
+          <Route path='todoListRecoil' element={<TodoListRecoil />} />
           <Route path='invoices' element={<Invoices />} >
             <Route index
               element={
