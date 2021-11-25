@@ -1,5 +1,5 @@
+import githubLogo from './assets/github-logo-64px.png';
 import './App.css';
-// import ShowTodoList from './showTodoList';
 import { Outlet, Link } from 'react-router-dom';
 
 /**
@@ -33,6 +33,20 @@ function App() {
             rel="noopener noreferrer"
           >
             React Recoil tutorial
+          </a> &nbsp; | &nbsp;
+          <a
+            className="App-link"
+            href="https://github.com/frames75/react-router-recoil-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img  src={githubLogo} 
+                  style={{ verticalAlign: 'bottom'}}
+                  height='32px' 
+                  width='32px'
+                  title="Go to the Github repo" 
+                  alt="Go to the Github repo" 
+            />
           </a>
         </div>
       </header>
@@ -40,17 +54,17 @@ function App() {
         <nav className="App-nav">
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}
-            to="/">
+            to="">
               Home
           </Link>
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}
-            to="/invoices">
+            to="invoices">
               Invoices
           </Link>
           <Link 
             style={{ color:'lightblue', display: "block", margin: "0.5rem 0" }}          
-            to="/todoListRecoil">
+            to="todoListRecoil">
               ToDo List
           </Link>
         </nav>

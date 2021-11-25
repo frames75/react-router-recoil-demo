@@ -57,7 +57,8 @@ export default function Invoices() {
                           display: "block", 
                           margin: "0.5rem 0" };
                 }}
-              to={`/invoices/${invoice.number}`}
+              // to={`/invoices/${invoice.number}`}
+              to={`${invoice.number}`}
               key={invoice.number}
             >
               {invoice.name}

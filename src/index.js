@@ -19,7 +19,7 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/react-router-recoil-demo">
       <Routes>
         <Route path='/' element={<App />} >
           <Route index

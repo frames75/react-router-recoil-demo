@@ -10,7 +10,7 @@ function Home() {
         <li>
           <b>React Router v6:</b> Client-side routing.
           <p>You can test the use of this package by clicking 
-            the <Link to='/invoices'>Invoices</Link> link on the Navbar.</p>
+            the <Link to='invoices'>Invoices</Link> link on the Navbar.</p>
         </li>
         <li>
         <b>Recoil:</b> State management.

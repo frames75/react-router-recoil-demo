@@ -60,12 +60,16 @@ function TodoListStats() {
 
   return (
     <ul>
-    { arrKeys && arrKeys.map((item) =>
-        <li key={item}>
-          {item}: {todoStats.get(item)}
-          {item==='percent_Completed' ? '%' : ''}
-        </li>
-      )
+    { arrKeys && arrKeys.map((item) => {
+        let formatedStat = todoStats.get(item);
+        if (item==='percent_Completed') 
+          formatedStat = new Intl.NumberFormat("de-DE", {maximumFractionDigits: 2}).format(formatedStat) + '%';
+
+        return (
+          <li key={item}>
+            {item}: {formatedStat}
+          </li>
+      );})
     }
     </ul>
   );

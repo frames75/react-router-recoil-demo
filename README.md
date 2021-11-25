@@ -1,3 +1,13 @@
+# Warning about deploying React Apps on GitHub Pages
+
+As stated in the [official documentation of Create React App](https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing), "*GitHub Pages doesn’t support routers that use the HTML5 pushState history API under the hood (for example, React Router using browserHistory)*". Because of this, it's necessary to add the `basename` parameter into the `<BrowserRouter>` tag:
+
+```html
+<BrowserRouter basename="/react-router-recoil-demo">
+```
+
+> [Guide of Deploying a React App on GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
