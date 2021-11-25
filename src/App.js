@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>
-          React Router & Recoil Demo
+          React Router v6 & Recoil Demo
         </h2>
         <div className="flex-row">
           <a
@@ -24,7 +24,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            React Router tutorial
+            React Router v6 tutorial
           </a> &nbsp; | &nbsp;
           <a
             className="App-link"

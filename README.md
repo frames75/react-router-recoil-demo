@@ -6,6 +6,13 @@ As stated in the [official documentation of Create React App](https://create-rea
 <BrowserRouter basename="/react-router-recoil-demo">
 ```
 
+On the other hand, on the `package.json` file we must change the build script to copy the index into the 404 page that gets served (as described in [this CRA Repo Issue](https://github.com/facebook/create-react-app/issues/1765#issuecomment-443598257)):
+
+```json
+"build": "react-scripts build && cp build/index.html build/404.html",
+```
+
+
 > [Guide of Deploying a React App on GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages).
 
 # Getting Started with Create React App
