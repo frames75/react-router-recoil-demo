@@ -10,12 +10,20 @@ function Home() {
         <li>
           <b>React Router v6:</b> Client-side routing.
           <p>You can test the use of this package by clicking 
-            the <Link to='invoices'>Invoices</Link> link on the Navbar.</p>
+            the &nbsp;
+            <Link to='invoices' style={{ color:'lightblue' }}>
+              Invoices
+            </Link> 
+            &nbsp; link on the Navbar.</p>
         </li>
         <li>
         <b>Recoil:</b> State management.
         <p>You can test the use of this package by clicking 
-          the <Link to='todoListRecoil'>ToDo List</Link> link on the Navbar.</p>
+          the &nbsp;
+          <Link to='todoListRecoil' style={{ color:'lightblue' }}>
+            ToDo List
+          </Link> 
+          &nbsp; link on the Navbar.</p>
         </li>
       </ul>
     </div>
