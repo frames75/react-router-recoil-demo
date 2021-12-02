@@ -12,7 +12,6 @@ On the other hand, on the `package.json` file we must change the build script to
 "build": "react-scripts build && cp build/index.html build/404.html",
 ```
 
-
 > [Guide of Deploying a React App on GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages).
 
 # Getting Started with Create React App
