@@ -1,6 +1,6 @@
 # Articles explaining the code
 
-I've written two articles in my blog explaining these two packages used in this app:
+I've written two articles in my blog explaining these packages used in this app:
 
 - [React Router v6](https://www.frames75.com/2021/ejemplo-react-router.html)
 - [React Recoil](https://www.frames75.com/2022/ejemplo-react-recoil.html)
