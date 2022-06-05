@@ -1,3 +1,11 @@
+# Articles explaining the code
+
+I've written two articles in my blog explaining these two packages used in this app:
+
+- [React Router v6](https://www.frames75.com/2021/ejemplo-react-router.html)
+- [React Recoil](https://www.frames75.com/2022/ejemplo-react-recoil.html)
+
+
 # Warning about deploying React Apps on GitHub Pages
 
 As stated in the [official documentation of Create React App](https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing), "*GitHub Pages doesn’t support routers that use the HTML5 pushState history API under the hood (for example, React Router using browserHistory)*". Because of this, it's necessary to add the `basename` parameter into the `<BrowserRouter>` tag:

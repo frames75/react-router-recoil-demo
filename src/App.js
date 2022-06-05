@@ -20,7 +20,7 @@ function App() {
         <div className="flex-row">
           <a
             className="App-link"
-            href="https://reactrouter.com/docs/en/v6/getting-started/tutorial"
+            href="https://www.frames75.com/2021/ejemplo-react-router.html"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ function App() {
           </a> &nbsp; | &nbsp;
           <a
             className="App-link"
-            href="https://recoiljs.org/docs/basic-tutorial/intro"
+            href="https://www.frames75.com/2022/ejemplo-react-recoil.html"
             target="_blank"
             rel="noopener noreferrer"
           >
