@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-router-recoil-demo/static/css/main.772ad51c.css",
-    "main.js": "/react-router-recoil-demo/static/js/main.bee30ed6.js",
+    "main.js": "/react-router-recoil-demo/static/js/main.49eccabc.js",
     "static/js/787.db35d95c.chunk.js": "/react-router-recoil-demo/static/js/787.db35d95c.chunk.js",
     "index.html": "/react-router-recoil-demo/index.html",
     "main.772ad51c.css.map": "/react-router-recoil-demo/static/css/main.772ad51c.css.map",
-    "main.bee30ed6.js.map": "/react-router-recoil-demo/static/js/main.bee30ed6.js.map",
+    "main.49eccabc.js.map": "/react-router-recoil-demo/static/js/main.49eccabc.js.map",
     "787.db35d95c.chunk.js.map": "/react-router-recoil-demo/static/js/787.db35d95c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.772ad51c.css",
-    "static/js/main.bee30ed6.js"
+    "static/js/main.49eccabc.js"
   ]
 }
